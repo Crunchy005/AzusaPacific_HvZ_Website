@@ -1,0 +1,62 @@
+<?php
+	session_start();
+?>
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>APU HVZ</title>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script>
+		$('.login input:first').on('keyup', function () {
+			var valid = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/.test(this.value) && this.value.length;
+			valid ? $('#email').css({ backgroundColor: "#F9F9F9", borderLeft: "3px solid #008000"}) : 
+			$('#email').css({ backgroundColor: "#F9F9F9",borderLeft: "3px solid #EE0000"});
+		});
+	</script>
+	<script>
+		$(document).ready( function() {
+			$("#basic_button").click( function() {
+				jAlert('Example of a basic alert box in jquery', 'jquery basic alert box');
+				});
+			});
+	</script>
+	</head>
+	
+	<body>
+		<div id="container">
+			<div id="nav">
+				<ul>
+					<li><a href="#">HvZ</a></li>
+					<li><a href="#">Rules</a></li>
+					<li><a href="#">Staff</a></li>
+					<li><a href="#">Stats</a></li>
+				</ul>
+			</div>
+			
+			<!-- Login -->
+			<div id="login">
+				<img src="images/Logo.png" alt="Humans versus Zombies" /><br />
+				<form name="login">
+					Email : <br/>
+					<input type="email" name="email" id="email"> <br/>
+					Password :<br/>
+					<input type="password" name="password"><br/><br/>
+						<div style="display: inline-table;">
+						<table>
+							<tr>
+								<!-- <td style="font-family: Bebas"> Login </td> -->
+								<button id="button">Login</button>
+								<!-- <td style="font-family: Bebas"> Sign Up </td> -->
+								<button id="button">Sign Up</button>
+							</tr>
+						<div>
+					<input type="submit">
+				</form>
+			</div>
+			<!-- End Login-->
+		</div>
+		
+	</body>
+	
+</html>

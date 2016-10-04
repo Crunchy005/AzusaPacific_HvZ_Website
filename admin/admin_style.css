@@ -1,0 +1,55 @@
+@font-face {
+	font-family: "Bebas Neue";
+	src: url(../fonts/BebasNeue.otf);
+}
+
+body {
+	background: black;
+	margin: 0px;
+}
+
+#admin_left {
+	float: left;
+	background-color: grey;
+	width: 20%;
+	height: 100%;
+	min-height: 300px;
+	margin: 0px;
+}
+
+	#admin_left ul {
+		list-style-type: none;
+		float: left;
+		margin-left: 0px;
+		padding-left: 10px;
+	}
+
+	#admin_left a {
+		color: black;
+		font-family: "Bebas Neue";
+		text-decoration: none;
+	}
+	
+		#admin_left a:hover {
+			text-decoration: underline;
+		}
+
+		#admin_left a:visited {
+			color: black;
+			text-decoration: none;
+		}
+ 
+#admin_right {
+	float: left;
+	background-color: white;
+	min-height: 300px;
+	height: 100%;
+	width: 80%;
+	margin: 0px;
+	z-index: 2;
+	box-shadow: inset 1px 0px 3px black;
+}
+
+#settings {
+	width: 100%;
+}

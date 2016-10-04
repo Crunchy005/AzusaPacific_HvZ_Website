@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+	
+<channel>
+	<item>
+		<title>APU Humans vs Zombies</title>
+		<link>http://apuhvz.com</link>
+		<description>The one place for all your APU HvZ information!</description>
+	</item>
+	<item>
+		<title>Welcome Cougars to HvZ!</title>
+		<link>http://apuhvz.com</link>
+		<description>This is a test in regards to feeds and whatnot.</description>
+	</item>
+</channel>
+
+</rss>

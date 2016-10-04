@@ -1,0 +1,353 @@
+/*
+    . are for casting a style to a specific class
+    # are for casting a style to a specific ID
+
+
+    You can also specify only specific elements for a class i.e.
+    p.center {
+        text-align:center;
+        color:red;
+    }
+
+    1em = 16 pixels
+*/
+
+/* Regular Viewport */
+
+/* Fonts */
+@font-face {
+    font-family: "Bebas";
+    src: url('/fonts/BebasNeue-webfont.eot'),
+         url('/fonts/BebasNeue-webfont.eot?#iefix') format('/fonts/embedded-opentype'),
+         url('/fonts/BebasNeue-webfont.woff') format('woff'),
+         url('/fonts/BebasNeue-webfont.ttf') format('truetype'),
+         url('/fonts/BebasNeue-webfont.svg#bebas_neueregular') format('svg'),
+         url('/fonts/BebasNeue-webfont.otf');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/** Nav **/
+header{
+	min-width: 70%;
+	background: black;
+	height: 10%;
+}
+
+#nav
+{
+	display: block;
+	width: 100%;
+	height: 35px;
+	text-align: center;
+}
+
+#nav > ul
+{
+	list-style: none;
+	color: red;
+}
+
+#nav > ul > li
+{
+	display: inline-block;
+	float: top;
+	margin: 5px 15px 0px 15px;
+	font-size: larger;
+}
+
+#nav li a
+{
+	color: black;
+	text-decoration: none;
+	padding: 10px 0px 0px 0px;
+	font-family: "Bebas";
+	font-size: 1.3em;
+}
+
+#nav li a:hover
+{
+	border-top: 1.5px solid darkred;
+}
+
+
+/** End Nav **/
+
+/** Body and Background **/
+body{
+	/*background: url(/images/lefthand.png),
+				url(/images/righthand.png);
+	background-repeat: no-repeat, no-repeat;
+	background-position: bottom left, bottom right;*/
+	background: url(/images/paperBack.jpg);
+	/*background-color: black;*/
+	background-attachment: fixed;
+	margin: 0px;
+}
+
+#container {
+	margin-left:auto;
+	margin-right:auto;
+	/*Required Override */
+	margin-top: 0px;
+	margin-bottom: 0px;
+	/* End Required Override */
+	min-height: 100%;
+	width:80%;
+	min-width: 1050px;
+	/*background-color:black;*/
+	overflow: hidden;
+	color: black;
+}
+
+#page_content {
+	max-width: 100%;
+	clear: left;
+	display: inline;
+}
+
+#home_content {
+	text-align: left;
+	padding-left: 25px;
+}
+
+.button
+{
+	font-family: "Bebas";
+	font-size: 1.5em;
+	color: white;
+	/*background-color: black;*/
+	border: none;
+	-webkit-appearance: none;
+
+}
+
+#login {
+	float: left;
+	/* Delete this if it messes up.*/
+	height: 100%;
+	width: 284px;
+	/* End */
+	padding: 10px;
+	margin: auto;
+	color: black;
+	text-align: center;
+	font-weight: 500;
+	font-size: 18px;
+	font-family: "Bebas";
+	display: inline;
+}
+
+#login input {
+	/*background-color: black;*/
+	border: white solid 1px;
+	height: 20px; 
+	width:  195px;
+	color: black;
+	font-weight: bolder;
+	opacity: 0.7;
+}
+
+#login-nav{
+	width: 100%;
+	float: left;
+	text-align: center;
+	margin: auto;
+}
+
+#login ul{
+	width: 100%;
+	float: left;
+	list-style: none;
+	text-align: left;
+	margin: 0px;
+}
+
+#login li{
+	font-family: "Bebas";
+	display: inline;
+	color: black;
+	font-size: 30px;
+	font-weight: 500;
+	text-align: center;
+	margin: auto;
+}
+
+/**
+ul:after {
+  content: '';
+  width: 0;
+  height: 100%;
+  position: absolute;
+  border: 1px solid black;
+  top: 0;
+  left: 100px;
+}
+**/
+
+.center
+{
+	width: 80%;
+	text-align: center;
+	margin: auto;
+}
+/** End Body and Background **/
+
+/** Footer **/
+#footer
+{
+	/*background-color: black;*/
+	height: 100px;
+	color: black;
+	min-width: 1050px;
+	width: 80%;
+	margin: auto;
+	border-top: 1px solid white;
+	vertical-align: baseline;
+}
+
+/* Profile info page styles */
+
+#profile_info {
+	float: left;
+	padding: 20px;
+}
+
+/** End profile styles **/
+
+
+/* Stats Page Table */
+
+table.sortable {
+	width: 90%;
+	border: 1px solid darkred;
+	border-collapse: collapse;
+	clear: both;
+	margin: auto;
+}
+
+table.sortable td {
+	border: 1px solid darkred;
+	text-align: center;
+	padding: 10px;
+}
+
+table.sortable th {
+	padding: 10px;
+	/*background-color: #2c2a2a;*/
+}
+
+h1.table_title {
+	font-family: "Bebas Neue";
+	text-align: center;
+	float: left;
+	width: 100%;
+	font-size: 40px;
+}
+
+#stats {
+	float: right;
+	width: 65%;
+}
+	#stats h1 {
+		float: left;
+		padding: 15px;
+		font-family: "Bebas Neue";
+		text-align: center;
+		font-size: 50px;
+	}
+/* stats page end */
+
+
+/*-------------------------
+	The Login Form
+	AKA This looks gorgeous.
+--------------------------*/
+#login-register{
+	background-color:#242424;
+	padding: 65px 75px;
+	width:500px;
+	height:320px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin:-235px 0 0 -325px;
+
+	box-shadow:0 2px 5px rgba(0,0,0,0.5);
+}
+
+#login-register h1{
+	font-size:36px;
+}
+
+#login-register input{
+	font: inherit;
+	font-size: 18px;
+	line-height: 30px;
+	background-color: #363636;
+	color: #fff;
+	padding: 10px 20px;
+	border: none;
+	display: block;
+	width: 450px;
+	margin: 45px 0 15px;
+	outline: none;
+}
+
+#login-register p{
+	line-height:1.4;
+}
+
+#login-register button{
+	display:inline-block;
+	margin-top:50px;
+
+	font:inherit;
+	font-weight:bold;
+	font-size:20px;
+
+	cursor:pointer;
+
+	background-color:#5ca1cd;
+	color:#fff;
+	padding:20px 45px;
+
+	border:none;
+	border-bottom:3px solid #3f84b0;
+	border-radius:3px;
+}
+
+#login-register button:hover{
+	background-color:#61a8d5;
+}
+
+#login-register.loggedIn button{
+	cursor: default;
+	background-color: #555 !important;
+	border-bottom-color: #444 !important;
+	color: #aaa !important;
+}
+
+#login-register span{
+	line-height:1.4;
+	font-size: 12px;
+	position: absolute;
+	bottom: 95px;
+	width: 225px;
+	height: 20px;
+	right: 80px;
+	color: #85bb2f;
+	background:url('../img/preloader.gif') 0 -1000px no-repeat;
+}
+
+#login-register.error span{
+	color: #ee5ea5;
+}
+
+#login-register.loading span{
+	color: transparent;
+	background-position: 0 100%;
+}
+
+/* Mobile CSS Media Port  */

@@ -1,0 +1,170 @@
+/*
+    . are for casting a style to a specific class
+    # are for casting a style to a specific ID
+
+
+    You can also specify only specific elements for a class i.e.
+    p.center {
+        text-align:center;
+        color:red;
+    }
+    
+    The preceding is interpretted
+    
+    1em = 16 pixels
+*/
+
+@font-face {
+    font-family: 'Bebas';
+    src: url('./fonts/BebasNeue-webfont.eot');
+    src: url('./fonts/BebasNeue-webfont.eot?#iefix') format('./fonts/embedded-opentype'),
+         url('./fonts/BebasNeue-webfont.woff') format('woff'),
+         url('./fonts/BebasNeue-webfont.ttf') format('truetype'),
+         url('./fonts/BebasNeue-webfont.svg#bebas_neueregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+body{
+	background: url(./images/lefthand.png),
+				url(./images/righthand.png);
+	background-repeat: no-repeat, no-repeat;
+	background-position: bottom left, bottom right;
+	background-color: black;
+	background-attachment: fixed;
+	margin: 0px;
+}
+
+header{
+	min-width: 70%;
+	background: black;
+	height: 10%;
+}
+
+#container
+{
+	margin-left:auto;
+	margin-right:auto;
+	/*Required Override*/
+	margin-top: 0px;
+	margin-bottom: 0px;
+	/*End Required Override*/
+	height: 100%;
+	width:80%;
+	background-color:black;
+	overflow: hidden;
+	color: WHITE;
+	text-align: center;
+}
+
+#nav
+{
+	display: block;
+	width: 100%;
+	height: 35px;
+	font-family: "Bebas";
+}
+
+#nav > ul
+{
+	list-style: none;
+	color: red;
+}
+
+#nav > ul > li
+{
+	display: inline-block;
+	float: top;
+	margin: 5px 15px 0px 15px;	
+	font-size: larger;
+}
+
+#nav li a
+{
+	color: white;
+	text-decoration: none;
+	padding: 10px 0px 0px 0px;
+	font-family: "Arial Black";
+}
+
+#nav li a:hover
+{
+	border-top: 1.5px solid white;
+}
+
+#button
+{
+	font-family: "Bebas";
+	font-size: 1.5em;
+	color: white;
+	background-color: black;
+	border: none;
+	-webkit-appearance: none;
+}
+
+/*
+#nav
+{
+	width: 100%;
+	float: left;
+	border-bottom: 1px solid white;
+}
+
+#nav ul
+{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-weight: bolder;
+	font-size: 100%;
+	list-style: none;
+}
+#nav li
+{
+	float: left;
+	margin: 10px 6%;
+}
+
+#nav li a
+{
+	color: white;
+	padding: 0px 5%;
+	text-decoration: none;
+	font-family: "Arial Black";
+}*/
+
+#content {
+	float: left;
+	color: white;
+	background-color: black;
+}
+
+#login {
+	float: left;
+	background: black;
+	padding: 10px;
+	margin-top: 0px;
+	color: white;
+	text-align: center;
+	font-weight: bolder;
+}
+
+#login input {
+	background-color: black;
+	border: white solid 1px;
+	color: white;
+	font-weight: bolder;
+}
+
+#error{
+	color: red;
+	border: red solid 1px;
+	font-weight: bolder;
+}
+	
+	
+	
+	
+	
+
