@@ -151,8 +151,16 @@
 			$command = "mysqldump --opt -h $hostname -u $username -p $password $dbname | gzip > $backupFile";
 			system($command);
 
+			//insert new admin account
+			mysqli_real_escape_string($email);
+			mysqli_real_escape_string(@pass); //make safe email and passwords
+			
+			$password = password_hash($default_password, PASSWORD_BCRYPT);//default password
+			$q = "insert into Player (f_name, l_name, pid, p_email, p_password, living_area, alpha, picture_location, kill_code, status, paid, active, admin) values ('APU', 'HVZ', 000001, '$default_account', '$password', 'Cougar Dome', 0, 'player_pics/APUHVZ.jpg', 111111, 4, 1, 1, 1)";//big insert statement for default account
+			$result = mysqli_query($con, $q) or die ("Cannot run query " . mysqli_error($con));
+			
 			//clear all the tables
-			mysqli_query($con, "delete from Player") or die ("Cannot run query " . mysqli_error($con));
+			mysqli_query($con, "delete from Player where p_email <> '$email'") or die ("Cannot run query " . mysqli_error($con));
 			mysqli_query($con, "delete from Mission") or die ("Cannot run query " . mysqli_error($con));
 			mysqli_query($con, "delete from Game") or die ("Cannot run query " . mysqli_error($con));
 			mysqli_query($con, "delete from Mission_att") or die ("Cannot run query " . mysqli_error($con));
@@ -163,10 +171,6 @@
 			mysqli_query($con, "delete from map") or die ("Cannot run query " . mysqli_error($con));
 			//tables cleared at this point
 			
-			
-			$password = password_hash($default_password, PASSWORD_BCRYPT);//default password
-			$q = "insert into Player (f_name, l_name, pid, p_email, p_password, living_area, alpha, picture_location, kill_code, status, paid, active, admin) values ('APU', 'HVZ', 000001, '$default_account', '$password', 'Cougar Dome', 0, 'player_pics/APUHVZ.jpg', 111111, 4, 1, 1, 1)";//big insert statement for default account
-			$result = mysqli_query($con, $q) or die ("Cannot run query " . mysqli_error($con));
 			if(!$result)//if query is bad error
 				return "error creating default account please talk to server administrator to fix this problem.";
 			else//insert a row into game table for game settings.
